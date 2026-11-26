@@ -1,0 +1,21 @@
+{
+    "name": "Payment Provider: Modena",
+    "version": "20.0.1.0.0",
+    "category": "Accounting/Payment Providers",
+    "summary": "Modena financing (Pay in 3, hire-purchase, leasing, factoring) and bank payments.",
+    "author": "Avalah",
+    "website": "https://www.avalah.ee",
+    "depends": ["payment", "product"],
+    "data": [
+        "views/payment_provider_views.xml",
+        "views/payment_method_views.xml",
+        "views/payment_transaction_views.xml",
+        "views/product_template_views.xml",
+        "data/payment_provider_data.xml",
+        "data/payment_method_data.xml",
+        "data/ir_cron_data.xml",
+    ],
+    "post_init_hook": "post_init_hook",
+    "uninstall_hook": "uninstall_hook",
+    "license": "LGPL-3",
+}

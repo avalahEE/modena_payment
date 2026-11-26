@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="payment_provider_modena" model="payment.provider">
+        <field name="name">Modena</field>
+        <field name="code">modena</field>
+        <field name="image_128" type="bytes" file="payment_modena/static/img/modena.png"/>
+        <field name="module_id" ref="base.module_payment_modena"/>
+        <field name="redirect_form_view_id" ref="payment.generic_redirect_form"/>
+        <field name="available_currency_ids" eval="[Command.set([ref('base.EUR')])]"/>
+    </record>
+
+</odoo>

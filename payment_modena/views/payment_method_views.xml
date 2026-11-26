@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="payment_method_form" model="ir.ui.view">
+        <field name="name">Modena Payment Method Form</field>
+        <field name="model">payment.method</field>
+        <field name="inherit_id" ref="payment.payment_method_form"/>
+        <field name="arch" type="xml">
+            <sheet position="inside">
+                <group string="Modena" invisible="not code.startswith('modena_')">
+                    <field name="modena_maturity_months" invisible="code.startswith('modena_direct_')"/>
+                    <field name="modena_min_amount"/>
+                    <field name="modena_max_amount"/>
+                </group>
+            </sheet>
+        </field>
+    </record>
+
+</odoo>

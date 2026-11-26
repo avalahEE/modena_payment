@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="payment_transaction_form" model="ir.ui.view">
+        <field name="name">Modena Transaction Form</field>
+        <field name="model">payment.transaction</field>
+        <field name="inherit_id" ref="payment.payment_transaction_form"/>
+        <field name="arch" type="xml">
+            <header position="inside">
+                <button string="Check Modena status" type="object" name="action_modena_refresh_status"
+                        invisible="provider_code != 'modena' or not provider_reference or state not in ('draft', 'pending', 'cancel')"/>
+            </header>
+        </field>
+    </record>
+
+</odoo>

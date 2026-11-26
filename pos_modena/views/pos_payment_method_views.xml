@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="pos_payment_method_view_form" model="ir.ui.view">
+        <field name="name">pos.payment.method.form.inherit.pos_modena</field>
+        <field name="model">pos.payment.method</field>
+        <field name="inherit_id" ref="pos_online_payment.pos_payment_method_view_form_inherit_pos_online_payment"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='online_payment_provider_ids']/.." position="after">
+                <field name="modena_payment_slip" invisible="type != 'online'"/>
+                <field name="modena_slip_minutes" invisible="type != 'online' or not modena_payment_slip"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

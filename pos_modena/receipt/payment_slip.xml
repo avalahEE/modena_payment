@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="pos_modena.payment_slip">
+        <html id="pos-receipt">
+            <head>
+                <meta charset="UTF-8"/>
+                <t t-call="point_of_sale.pos_order_receipt_style"/>
+            </head>
+            <body>
+                <div class="pos-receipt">
+                    <div class="w-100 text-center mb-3" name="logo">
+                        <img t-if="image.get('logo')" t-att-src="image['logo']" style="max-height: 75px"/>
+                    </div>
+                    <div class="text-center text-large fw-bold">NOT PAID</div>
+                    <div class="text-center">Scan the code and pay with your phone</div>
+                    <div class="text-center mt-2">
+                        <span t-out="extra_data['order_name']"/> · <span t-out="extra_data['date']"/>
+                    </div>
+                    <table class="w-100 mt-3">
+                        <tbody>
+                            <tr t-foreach="extra_data['lines']" t-as="line">
+                                <td class="text-start"><t t-out="line['qty']"/> × <t t-out="line['name']"/></td>
+                                <td class="text-end" t-out="line['price']"/>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="w-100 text-large mt-2">
+                        <tbody>
+                            <tr>
+                                <td class="text-start fw-bold">TO PAY</td>
+                                <td class="text-end fw-bold" t-out="extra_data['amount']"/>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center mt-2">Valid until <t t-out="extra_data['valid_until']"/></div>
+                    <div class="text-center mt-2">
+                        <img t-att-src="extra_data['qr_code']" style="width: 55%"/>
+                    </div>
+                    <t t-call="point_of_sale.company_info_receipt"/>
+                </div>
+            </body>
+        </html>
+    </template>
+
+</odoo>

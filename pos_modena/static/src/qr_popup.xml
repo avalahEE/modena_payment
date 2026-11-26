@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="pos_modena.QRPopup" t-inherit="point_of_sale.QRPopup" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('qr-code-popup-footer')]" position="inside">
+            <button t-if="this.modenaLine" class="btn btn-primary btn-lg mx-2" t-on-click="this.printModenaSlip">
+                Print payment slip
+            </button>
+        </xpath>
+    </t>
+</templates>

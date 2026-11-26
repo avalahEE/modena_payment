@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="pay" inherit_id="pos_online_payment.pay">
+        <xpath expr="//span[hasclass('order-reference')]/.." position="replace">
+            <div class="d-flex justify-content-between align-items-center p-3 border-bottom bg-light">
+                <div t-if="pos_order_sudo" class="d-flex flex-column">
+                    <span class="fw-bolder" t-out="pos_order_sudo.company_id.name"/>
+                    <span class="text-muted small" t-out="pos_order_sudo.config_id.name"/>
+                </div>
+                <span class="text-muted">
+                    Order <t t-out="pos_order_sudo.tracking_number or reference_prefix if pos_order_sudo else reference_prefix"/>
+                </span>
+            </div>
+        </xpath>
+        <xpath expr="//t[@t-call='pos_online_payment.pay_summary']" position="before">
+            <table t-if="pos_order_sudo and pos_order_sudo.lines" class="table table-sm mb-3">
+                <tbody>
+                    <tr t-foreach="pos_order_sudo.lines" t-as="line">
+                        <td t-out="line.full_product_name or line.product_id.display_name"/>
+                        <td class="text-end text-nowrap">
+                            <t t-out="line.qty" t-options="{'widget': 'float', 'precision': 0 if line.qty == int(line.qty) else 2}"/> ×
+                        </td>
+                        <td class="text-end text-nowrap"
+                            t-out="line.price_subtotal_incl"
+                            t-options="{'widget': 'monetary', 'display_currency': pos_order_sudo.currency_id}"/>
+                    </tr>
+                </tbody>
+            </table>
+        </xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,194 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_modena
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-26 09:57+0000\n"
+"PO-Revision-Date: 2026-11-26 09:57+0000\n"
+"Last-Translator: \n"
+"Language: et\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_modena
+#. odoo-python
+#: code:addons/pos_modena/models/pos_order.py:0
+msgid "%s (waiting for Modena payment)"
+msgstr "%s (ootab Modena makset)"
+
+#. module: pos_modena
+#: model:ir.model.fields,field_description:pos_modena.field_ir_ui_view__display_name
+#: model:ir.model.fields,field_description:pos_modena.field_payment_transaction__display_name
+#: model:ir.model.fields,field_description:pos_modena.field_pos_order__display_name
+#: model:ir.model.fields,field_description:pos_modena.field_pos_payment_method__display_name
+msgid "Display Name"
+msgstr "Kuvatav nimi"
+
+#. module: pos_modena
+#: model:ir.model.fields,help:pos_modena.field_pos_payment_method__modena_slip_minutes
+msgid ""
+"How long the customer has to start the payment. After that the parked order "
+"is cancelled and its reserved products are released."
+msgstr "Kui kaua on kliendil aega makset alustada. Seejärel ootel tellimus tühistatakse ja broneeritud tooted vabastatakse."
+
+#. module: pos_modena
+#: model:ir.model.fields,field_description:pos_modena.field_ir_ui_view__id
+#: model:ir.model.fields,field_description:pos_modena.field_payment_transaction__id
+#: model:ir.model.fields,field_description:pos_modena.field_pos_order__id
+#: model:ir.model.fields,field_description:pos_modena.field_pos_payment_method__id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_modena
+#: model:ir.model.fields,field_description:pos_modena.field_pos_order__modena_parked_until
+msgid "Modena Parked Until"
+msgstr "Modena ootel kuni"
+
+#. module: pos_modena
+#: model:ir.model.fields,field_description:pos_modena.field_pos_order__modena_reservation_id
+msgid "Modena Reservation"
+msgstr "Modena broneering"
+
+#. module: pos_modena
+#: model_terms:ir.ui.view,arch_db:pos_modena.payment_slip
+msgid "NOT PAID"
+msgstr "MAKSMATA"
+
+#. module: pos_modena
+#: model:ir.model.fields,help:pos_modena.field_pos_payment_method__modena_payment_slip
+msgid ""
+"Offer to print a slip with the customer's own payment QR code, so they can "
+"pay on their phone while the till serves the next customer."
+msgstr "Paku maksetšeki printimist kliendi isikliku makse QR-koodiga, et klient saaks telefoniga maksta, samal ajal kui kassa teenindab järgmist klienti."
+
+#. module: pos_modena
+#. odoo-python
+#: code:addons/pos_modena/models/payment_transaction.py:0
+msgid "Online payment after POS closing"
+msgstr "Veebimakse pärast kassa sulgemist"
+
+#. module: pos_modena
+#. odoo-javascript
+#: code:addons/pos_modena/static/src/pos_store.js:0
+msgid "Open order"
+msgstr "Ava tellimus"
+
+#. module: pos_modena
+#: model_terms:ir.ui.view,arch_db:pos_modena.pay
+msgid "Order"
+msgstr "Tellimus"
+
+#. module: pos_modena
+#. odoo-javascript
+#: code:addons/pos_modena/static/src/pos_store.js:0
+msgid "Order %s has been paid."
+msgstr "Tellimus %s on makstud."
+
+#. module: pos_modena
+#. odoo-javascript
+#: code:addons/pos_modena/static/src/qr_popup.js:0
+msgid "Order %s is waiting for the payment."
+msgstr "Tellimus %s ootab makset."
+
+#. module: pos_modena
+#. odoo-javascript
+#: code:addons/pos_modena/static/src/pos_store.js:0
+msgid ""
+"Order %s was not paid in time. It was cancelled and its products released."
+msgstr "Tellimust %s ei makstud õigeks ajaks. See tühistati ja tooted vabastati."
+
+#. module: pos_modena
+#: model:ir.module.module,shortdesc:base.module_pos_modena
+msgid "POS Modena"
+msgstr "POS Modena"
+
+#. module: pos_modena
+#: model:ir.actions.server,name:pos_modena.cron_modena_expire_parked_ir_actions_server
+msgid "POS Modena: cancel expired parked orders"
+msgstr "POS Modena: aegunud ootel tellimuste tühistamine"
+
+#. module: pos_modena
+#: model:ir.module.module,summary:base.module_pos_modena
+msgid ""
+"Pay POS orders with Modena from the customer's phone: QR code or printed "
+"payment slip."
+msgstr "Kassatellimuste maksmine Modenaga kliendi telefonist: QR-kood või prinditud maksetšekk."
+
+#. module: pos_modena
+#. odoo-python
+#: code:addons/pos_modena/models/payment_transaction.py:0
+msgid ""
+"Payment %(ref)s arrived after the POS session %(session)s was closed. The "
+"payment is booked as a customer payment, finish order %(order)s manually."
+msgstr "Makse %(ref)s saabus pärast kassa vahetuse %(session)s sulgemist. Makse on kirjendatud kliendi maksena, lõpeta tellimus %(order)s käsitsi."
+
+#. module: pos_modena
+#: model:ir.model,name:pos_modena.model_payment_transaction
+msgid "Payment Transaction"
+msgstr "Maksetehing"
+
+#. module: pos_modena
+#: model:ir.model,name:pos_modena.model_pos_order
+msgid "Point of Sale Order"
+msgstr "Kassatellimus"
+
+#. module: pos_modena
+#: model:ir.model,name:pos_modena.model_pos_payment_method
+msgid "Point of Sale Payment Method"
+msgstr "Kassa makseviis"
+
+#. module: pos_modena
+#. odoo-javascript
+#: code:addons/pos_modena/static/src/qr_popup.xml:0
+#: model:ir.model.fields,field_description:pos_modena.field_pos_payment_method__modena_payment_slip
+msgid "Print payment slip"
+msgstr "Prindi maksetšekk"
+
+#. module: pos_modena
+#. odoo-javascript
+#: code:addons/pos_modena/static/src/pos_store.js:0
+msgid "Print receipt"
+msgstr "Prindi tšekk"
+
+#. module: pos_modena
+#: model_terms:ir.ui.view,arch_db:pos_modena.payment_slip
+msgid "Scan the code and pay with your phone"
+msgstr "Skaneeri kood ja maksa telefoniga"
+
+#. module: pos_modena
+#: model:ir.model.fields,field_description:pos_modena.field_pos_payment_method__modena_slip_minutes
+msgid "Slip valid for (minutes)"
+msgstr "Maksetšeki kehtivus (minutites)"
+
+#. module: pos_modena
+#: model_terms:ir.ui.view,arch_db:pos_modena.payment_slip
+msgid "TO PAY"
+msgstr "MAKSTA"
+
+#. module: pos_modena
+#. odoo-javascript
+#: code:addons/pos_modena/static/src/pos_store.js:0
+msgid "The payment for order %s failed. Open it to take another payment."
+msgstr "Tellimuse %s makse ebaõnnestus. Ava tellimus ja võta makse muul viisil."
+
+#. module: pos_modena
+#. odoo-python
+#: code:addons/pos_modena/controllers/main.py:0
+msgid "The time to pay this order has ended. Please contact the shop."
+msgstr "Selle tellimuse maksmise aeg on läbi. Palun pöördu kassasse."
+
+#. module: pos_modena
+#: model_terms:ir.ui.view,arch_db:pos_modena.payment_slip
+msgid "Valid until"
+msgstr "Kehtib kuni"
+
+#. module: pos_modena
+#: model:ir.model,name:pos_modena.model_ir_ui_view
+msgid "View"
+msgstr "Vaade"

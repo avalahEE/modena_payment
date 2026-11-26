@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="payment_method_modena_slice" model="payment.method">
+        <field name="name">Pay in 3</field>
+        <field name="code">modena_slice</field>
+        <field name="sequence">10</field>
+        <field name="provider_id" ref="payment_provider_modena"/>
+        <field name="image" type="bytes" file="payment_modena/static/img/modena.png"/>
+        <field name="support_tokenization">False</field>
+        <field name="supported_country_ids" eval="[Command.set([ref('base.ee'), ref('base.lv')])]"/>
+        <field name="supported_currency_ids" eval="[Command.set([ref('base.EUR')])]"/>
+    </record>
+
+    <record id="payment_method_modena_credit" model="payment.method">
+        <field name="name">Hire-purchase</field>
+        <field name="code">modena_credit</field>
+        <field name="sequence">11</field>
+        <field name="provider_id" ref="payment_provider_modena"/>
+        <field name="image" type="bytes" file="payment_modena/static/img/modena.png"/>
+        <field name="support_tokenization">False</field>
+        <field name="supported_country_ids" eval="[Command.set([ref('base.ee'), ref('base.lv')])]"/>
+        <field name="supported_currency_ids" eval="[Command.set([ref('base.EUR')])]"/>
+    </record>
+
+    <record id="payment_method_modena_click_try" model="payment.method">
+        <field name="name">Try at home</field>
+        <field name="code">modena_click_try</field>
+        <field name="sequence">12</field>
+        <field name="provider_id" ref="payment_provider_modena"/>
+        <field name="image" type="bytes" file="payment_modena/static/img/modena.png"/>
+        <field name="support_tokenization">False</field>
+        <field name="supported_country_ids" eval="[Command.set([ref('base.ee'), ref('base.lv')])]"/>
+        <field name="supported_currency_ids" eval="[Command.set([ref('base.EUR')])]"/>
+    </record>
+
+    <record id="payment_method_modena_business_leasing" model="payment.method">
+        <field name="name">Business leasing</field>
+        <field name="code">modena_business_leasing</field>
+        <field name="sequence">13</field>
+        <field name="provider_id" ref="payment_provider_modena"/>
+        <field name="image" type="bytes" file="payment_modena/static/img/modena.png"/>
+        <field name="support_tokenization">False</field>
+        <field name="supported_country_ids" eval="[Command.set([ref('base.ee'), ref('base.lv')])]"/>
+        <field name="supported_currency_ids" eval="[Command.set([ref('base.EUR')])]"/>
+    </record>
+
+    <record id="payment_method_modena_business_factoring" model="payment.method">
+        <field name="name">Business factoring</field>
+        <field name="code">modena_business_factoring</field>
+        <field name="sequence">14</field>
+        <field name="provider_id" ref="payment_provider_modena"/>
+        <field name="image" type="bytes" file="payment_modena/static/img/modena.png"/>
+        <field name="support_tokenization">False</field>
+        <field name="supported_country_ids" eval="[Command.set([ref('base.ee'), ref('base.lv')])]"/>
+        <field name="supported_currency_ids" eval="[Command.set([ref('base.EUR')])]"/>
+    </record>
+
+    <record id="payment_method_modena_operating_lease" model="payment.method">
+        <field name="name">Operating lease</field>
+        <field name="code">modena_operating_lease</field>
+        <field name="sequence">15</field>
+        <field name="provider_id" ref="payment_provider_modena"/>
+        <field name="image" type="bytes" file="payment_modena/static/img/modena.png"/>
+        <field name="support_tokenization">False</field>
+        <field name="supported_country_ids" eval="[Command.set([ref('base.ee'), ref('base.lv')])]"/>
+        <field name="supported_currency_ids" eval="[Command.set([ref('base.EUR')])]"/>
+        <field name="modena_maturity_months">36</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,193 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_modena
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-26 09:57+0000\n"
+"PO-Revision-Date: 2026-11-26 09:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_modena
+#. odoo-python
+#: code:addons/pos_modena/models/pos_order.py:0
+msgid "%s (waiting for Modena payment)"
+msgstr ""
+
+#. module: pos_modena
+#: model:ir.model.fields,field_description:pos_modena.field_ir_ui_view__display_name
+#: model:ir.model.fields,field_description:pos_modena.field_payment_transaction__display_name
+#: model:ir.model.fields,field_description:pos_modena.field_pos_order__display_name
+#: model:ir.model.fields,field_description:pos_modena.field_pos_payment_method__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: pos_modena
+#: model:ir.model.fields,help:pos_modena.field_pos_payment_method__modena_slip_minutes
+msgid ""
+"How long the customer has to start the payment. After that the parked order "
+"is cancelled and its reserved products are released."
+msgstr ""
+
+#. module: pos_modena
+#: model:ir.model.fields,field_description:pos_modena.field_ir_ui_view__id
+#: model:ir.model.fields,field_description:pos_modena.field_payment_transaction__id
+#: model:ir.model.fields,field_description:pos_modena.field_pos_order__id
+#: model:ir.model.fields,field_description:pos_modena.field_pos_payment_method__id
+msgid "ID"
+msgstr ""
+
+#. module: pos_modena
+#: model:ir.model.fields,field_description:pos_modena.field_pos_order__modena_parked_until
+msgid "Modena Parked Until"
+msgstr ""
+
+#. module: pos_modena
+#: model:ir.model.fields,field_description:pos_modena.field_pos_order__modena_reservation_id
+msgid "Modena Reservation"
+msgstr ""
+
+#. module: pos_modena
+#: model_terms:ir.ui.view,arch_db:pos_modena.payment_slip
+msgid "NOT PAID"
+msgstr ""
+
+#. module: pos_modena
+#: model:ir.model.fields,help:pos_modena.field_pos_payment_method__modena_payment_slip
+msgid ""
+"Offer to print a slip with the customer's own payment QR code, so they can "
+"pay on their phone while the till serves the next customer."
+msgstr ""
+
+#. module: pos_modena
+#. odoo-python
+#: code:addons/pos_modena/models/payment_transaction.py:0
+msgid "Online payment after POS closing"
+msgstr ""
+
+#. module: pos_modena
+#. odoo-javascript
+#: code:addons/pos_modena/static/src/pos_store.js:0
+msgid "Open order"
+msgstr ""
+
+#. module: pos_modena
+#: model_terms:ir.ui.view,arch_db:pos_modena.pay
+msgid "Order"
+msgstr ""
+
+#. module: pos_modena
+#. odoo-javascript
+#: code:addons/pos_modena/static/src/pos_store.js:0
+msgid "Order %s has been paid."
+msgstr ""
+
+#. module: pos_modena
+#. odoo-javascript
+#: code:addons/pos_modena/static/src/qr_popup.js:0
+msgid "Order %s is waiting for the payment."
+msgstr ""
+
+#. module: pos_modena
+#. odoo-javascript
+#: code:addons/pos_modena/static/src/pos_store.js:0
+msgid ""
+"Order %s was not paid in time. It was cancelled and its products released."
+msgstr ""
+
+#. module: pos_modena
+#: model:ir.module.module,shortdesc:base.module_pos_modena
+msgid "POS Modena"
+msgstr ""
+
+#. module: pos_modena
+#: model:ir.actions.server,name:pos_modena.cron_modena_expire_parked_ir_actions_server
+msgid "POS Modena: cancel expired parked orders"
+msgstr ""
+
+#. module: pos_modena
+#: model:ir.module.module,summary:base.module_pos_modena
+msgid ""
+"Pay POS orders with Modena from the customer's phone: QR code or printed "
+"payment slip."
+msgstr ""
+
+#. module: pos_modena
+#. odoo-python
+#: code:addons/pos_modena/models/payment_transaction.py:0
+msgid ""
+"Payment %(ref)s arrived after the POS session %(session)s was closed. The "
+"payment is booked as a customer payment, finish order %(order)s manually."
+msgstr ""
+
+#. module: pos_modena
+#: model:ir.model,name:pos_modena.model_payment_transaction
+msgid "Payment Transaction"
+msgstr ""
+
+#. module: pos_modena
+#: model:ir.model,name:pos_modena.model_pos_order
+msgid "Point of Sale Order"
+msgstr ""
+
+#. module: pos_modena
+#: model:ir.model,name:pos_modena.model_pos_payment_method
+msgid "Point of Sale Payment Method"
+msgstr ""
+
+#. module: pos_modena
+#. odoo-javascript
+#: code:addons/pos_modena/static/src/qr_popup.xml:0
+#: model:ir.model.fields,field_description:pos_modena.field_pos_payment_method__modena_payment_slip
+msgid "Print payment slip"
+msgstr ""
+
+#. module: pos_modena
+#. odoo-javascript
+#: code:addons/pos_modena/static/src/pos_store.js:0
+msgid "Print receipt"
+msgstr ""
+
+#. module: pos_modena
+#: model_terms:ir.ui.view,arch_db:pos_modena.payment_slip
+msgid "Scan the code and pay with your phone"
+msgstr ""
+
+#. module: pos_modena
+#: model:ir.model.fields,field_description:pos_modena.field_pos_payment_method__modena_slip_minutes
+msgid "Slip valid for (minutes)"
+msgstr ""
+
+#. module: pos_modena
+#: model_terms:ir.ui.view,arch_db:pos_modena.payment_slip
+msgid "TO PAY"
+msgstr ""
+
+#. module: pos_modena
+#. odoo-javascript
+#: code:addons/pos_modena/static/src/pos_store.js:0
+msgid "The payment for order %s failed. Open it to take another payment."
+msgstr ""
+
+#. module: pos_modena
+#. odoo-python
+#: code:addons/pos_modena/controllers/main.py:0
+msgid "The time to pay this order has ended. Please contact the shop."
+msgstr ""
+
+#. module: pos_modena
+#: model_terms:ir.ui.view,arch_db:pos_modena.payment_slip
+msgid "Valid until"
+msgstr ""
+
+#. module: pos_modena
+#: model:ir.model,name:pos_modena.model_ir_ui_view
+msgid "View"
+msgstr ""
